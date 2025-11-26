@@ -1,0 +1,245 @@
+/* ---------------------- */
+/* VARIÁVEIS DO SISTEMA   */
+/* ---------------------- */
+:root {
+    --primary: #0057D9;
+    --primary-dark: #003f9e;
+    --text: #333;
+    --bg: #fff;
+    --radius: 10px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --transition: .3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ---------------------- */
+/*   HEADER PROFISSIONAL  */
+/* ---------------------- */
+
+.header {
+    width: 100%;
+    background: #fff;
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav a {
+    color: var(--text);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    color: var(--primary);
+}
+
+/* MOBILE MENU */
+.menu-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-mobile span {
+    width: 26px;
+    height: 3px;
+    background: var(--text);
+    display: block;
+    margin: 5px;
+}
+
+/* NAV MOBILE */
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: var(--shadow);
+}
+
+.nav-mobile a {
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+/* ---------------------- */
+/*        SOBRE           */
+/* ---------------------- */
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 120px;
+}
+
+.sobre img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.sobre-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* ---------------------- */
+/*        PRODUTOS        */
+/* ---------------------- */
+
+.produtos h2 {
+    font-size: 2rem;
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    opacity: 0.8;
+}
+
+.card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.card button:hover {
+    background: var(--primary-dark);
+}
+
+/* ---------------------- */
+/*      MODAL CARRINHO    */
+/* ---------------------- */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 40px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+}
+
+.fechar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+}
+
+/* ---------------------- */
+/*     RESPONSIVIDADE     */
+/* ---------------------- */
+
+@media (max-width: 900px) {
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+}

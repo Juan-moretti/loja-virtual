@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Store</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo">Global<span>Store</span></h1>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#" id="btnCart">Carrinho</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-mobile" id="menuMobileBtn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="nav-mobile" id="navMobile">
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#" id="btnCartMobile">Carrinho</a>
+    </div>
+
+    <!-- SOBRE A LOJA -->
+    <section id="sobre" class="sobre container">
+        <div class="sobre-img">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Loja moderna">
+        </div>
+
+        <div class="sobre-texto">
+            <h2>Sobre a Empresa</h2>
+            <p>
+                A GlobalStore é uma multinacional presente em mais de 50 países, oferecendo produtos
+                premium com foco em inovação, sustentabilidade e experiência do cliente.
+            </p>
+            <p>
+                Nossa missão é entregar excelência com responsabilidade global, mantendo transparência,
+                tecnologia de ponta e compromisso com a qualidade.
+            </p>
+        </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="produtos container">
+        <h2>Produtos</h2>
+
+        <div class="grid-produtos" id="listaProdutos">
+            <!-- Produtos serão carregados dinamicamente pelo JavaScript -->
+        </div>
+    </section>
+
+    <!-- CARRINHO MODAL -->
+    <div class="modal" id="modalCarrinho">
+        <div class="modal-content">
+            <h3>Carrinho</h3>
+            <ul id="cartList"></ul>
+
+            <button class="fechar" id="fecharModal">Fechar</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
